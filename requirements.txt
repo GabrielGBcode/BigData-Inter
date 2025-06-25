@@ -1,0 +1,11 @@
+pandas
+openpyxl
+tqdm
+unidecode
+ollama
+numpy
+scikit-learn
+chromadb
+matplotlib
+wordcloud
+nltk 
