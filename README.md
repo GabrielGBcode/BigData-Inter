@@ -17,9 +17,9 @@ BD_trabalho/
 ├── clusters/         # Arquivos de clusters gerados (cluster_0.xlsx, ...)
 ├── imagens/          # Imagens de visualização (ex: tsne_clusters.png)
 ├── nuvens/           # Nuvens de palavras por cluster (nuvem_cluster_0.png, ...)
-├── data/             # Dados brutos/originais (avaliacoes_inter.xlsx, relatos.csv)
+├── data/             # Dados brutos/originais (avaliacoes_inter.parquet, avaliacoes_inter.xlsx)
 ├── processados/      # Dados processados (df_processado.pkl)
-├── scripts/          # Scripts Python (Trabalho.py, nuvem_palavras.py)
+├── scripts/          # Scripts Python (processamento_clusters.py, nuvem_palavras.py)
 ├── requirements.txt  # Dependências do projeto
 └── README.md         # Este arquivo
 ```
@@ -36,7 +36,7 @@ BD_trabalho/
 
    ```bash
    cd scripts
-   python Trabalho.py
+   python processamento_clusters.py
    ```
 
    Isso irá gerar os clusters, embeddings, visualizações e salvar o DataFrame processado em `../processados/df_processado.pkl`.
@@ -55,7 +55,7 @@ BD_trabalho/
 - **clusters/**: Arquivos Excel com os relatos agrupados por cluster.
 - **imagens/tsne_clusters.png**: Visualização dos clusters em 2D usando t-SNE.
 - **nuvens/**: Nuvens de palavras para cada cluster.
-- **scripts/Trabalho.py**: Script principal de processamento e clustering.
+- **scripts/processamento_clusters.py**: Script principal de processamento e clustering.
 - **scripts/nuvem_palavras.py**: Gera as nuvens de palavras a partir do DataFrame processado.
 
 ## Observações
