@@ -11,7 +11,23 @@ def run_script(script_path):
         sys.exit(result.returncode)
     print(f"Concluído: {script_path}")
 
+# Função para garantir o modelo bge-m3 do Ollama
+def ensure_ollama_bge_m3():
+    print("\nVerificando modelo bge-m3 do Ollama...")
+    try:
+        result = subprocess.run(["ollama", "pull", "bge-m3"], check=True)
+        print("Modelo bge-m3 do Ollama pronto para uso.")
+    except FileNotFoundError:
+        print("[ERRO] Ollama não está instalado ou não está no PATH. Instale o Ollama antes de rodar o pipeline.")
+        sys.exit(1)
+    except subprocess.CalledProcessError:
+        print("[ERRO] Não foi possível baixar o modelo bge-m3 do Ollama. Verifique sua instalação do Ollama.")
+        sys.exit(1)
+
 if __name__ == "__main__":
+    # 0. Garantir modelo do Ollama
+    ensure_ollama_bge_m3()
+
     # 1. Coleta dos dados do Glassdoor
     run_script(os.path.join('scripts', 'glassdoor_scraper.py'))
 
