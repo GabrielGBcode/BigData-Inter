@@ -43,4 +43,4 @@ if __name__ == "__main__":
     # 5. Gera gráfico do método do cotovelo
     run_script(os.path.join('scripts', 'metodo_cotovelo.py'))
 
-    print("\nFluxo completo finalizado com sucesso!") 
+    print("\nFluxo completo finalizado com sucesso!")
