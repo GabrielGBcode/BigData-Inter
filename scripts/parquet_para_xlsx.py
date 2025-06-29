@@ -11,5 +11,6 @@ df = pd.read_parquet(parquet_path)
 
 # Salvar como Excel
 print(f"Salvando como Excel: {xlsx_path}")
+os.makedirs('data', exist_ok=True)
 df.to_excel(xlsx_path, index=False)
 print("Conversão concluída com sucesso!") 

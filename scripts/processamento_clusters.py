@@ -15,6 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from sklearn.preprocessing import LabelEncoder  # <- esta linha corrige o erro
+import os
 
 
 # Carregar o arquivo Excel com os relatos
@@ -192,6 +193,16 @@ plt.show()
 
 # Salva o DataFrame processado para uso futuro
 print('Salvando DataFrame processado em processados/df_processado.pkl...')
+# Garante que a pasta 'processados' existe
+os.makedirs('processados', exist_ok=True)
 df.to_pickle("processados/df_processado.pkl")
 print('Arquivo processados/df_processado.pkl salvo com sucesso!')
+
+# Salva cada cluster em um arquivo xlsx separado
+os.makedirs('clusters', exist_ok=True)
+for cluster_id in sorted(df['cluster'].unique()):
+    df_cluster = df[df['cluster'] == cluster_id]
+    nome_arquivo = f'clusters/cluster{cluster_id}.xlsx'
+    df_cluster.to_excel(nome_arquivo, index=False)
+    print(f'Cluster {cluster_id} salvo em {nome_arquivo}')
 

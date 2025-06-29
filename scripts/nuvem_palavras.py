@@ -41,6 +41,8 @@ for cluster in clusters_unicos:
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
     plt.title(f'Nuvem de Palavras - Reclamações dos Funcionários (Cluster {cluster})', fontsize=20)
+    # Garante que a pasta 'nuvens' existe
+    os.makedirs('nuvens', exist_ok=True)
     nome_arquivo = f'nuvens/nuvem_cluster_{cluster}.png'
     plt.savefig(nome_arquivo, bbox_inches='tight')
     plt.close()

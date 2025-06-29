@@ -13,12 +13,6 @@ venv/
 .env/
 .venv/
 
-# Dados processados e resultados grandes
-processados/
-nuvens/
-imagens/
-clusters/
-
 # Arquivos de backup do Excel/Office
 ~$*
 

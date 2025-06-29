@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 # Configurar matplotlib para português
@@ -102,6 +103,7 @@ def gerar_grafico_cotovelo():
     plt.tight_layout()
     
     # Salvar o gráfico
+    os.makedirs('imagens', exist_ok=True)
     plt.savefig('imagens/grafico_cotovelo.png', dpi=300, bbox_inches='tight')
     print("Gráfico salvo como 'imagens/grafico_cotovelo.png'")
     
@@ -140,7 +142,6 @@ def gerar_grafico_cotovelo():
 
 if __name__ == "__main__":
     # Verificar se o diretório de imagens existe
-    import os
     if not os.path.exists('imagens'):
         os.makedirs('imagens')
         print("Diretório 'imagens' criado.")
