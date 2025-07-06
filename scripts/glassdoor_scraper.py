@@ -286,7 +286,16 @@ while True:
                 avaliacao_final = f"{pros_text} | {cons_text}" if pros_text and cons_text else pros_text or cons_text or "Avaliação vazia"
                 current_review_hash = hashlib.md5(f"{funcao}-{avaliacao_final}".encode('utf-8')).hexdigest()
                 if current_review_hash not in seen_review_hashes:
-                    reviews_data.append({"funcao": funcao, "avaliacao": avaliacao_final})
+                    try:
+                        data_el = review_el.find_element(By.XPATH, ".//span[contains(@class, 'timestamp_reviewDate')]")
+                        data_publicacao = data_el.text.strip()
+                    except:
+                        data_publicacao = ""
+                    reviews_data.append({
+                        "funcao": funcao,
+                        "avaliacao": avaliacao_final,
+                        "data": data_publicacao
+                    })
                     seen_review_hashes.add(current_review_hash)
                     new_reviews_this_iteration += 1
             except Exception as e:

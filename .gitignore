@@ -8,10 +8,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Ambientes virtuais
+# Ambientes virtuais e Arquivos de ambiente
 venv/
 .env/
 .venv/
+scripts/.env
 
 # Arquivos de backup do Excel/Office
 ~$*

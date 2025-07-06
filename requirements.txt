@@ -1,15 +1,19 @@
 pandas
 openpyxl
-tqdm
-unidecode
-ollama
 numpy
 scikit-learn
-chromadb
 matplotlib
 wordcloud
 nltk
-pyarrow
-fastparquet
+unidecode
+tqdm
 selenium
 webdriver-manager
+pyarrow
+fastparquet
+ollama  # Necessário para embeddings/modelos locais
+chromadb  # Opcional: se usar armazenamento vetorial
+
+# Para uso com OpenAI GPT (resumos automáticos)
+# openai
+# python-dotenv  # Para carregar variáveis do .env

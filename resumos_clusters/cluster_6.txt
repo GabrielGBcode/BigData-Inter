@@ -1,0 +1,19 @@
+==============================
+CLUSTER: 6
+QUANTIDADE DE RECLAMAÇÕES: 139
+==============================
+
+Resumo do cluster:
+**Título do Cluster**: Satisfação Geral dos Funcionários
+**Palavras-Chave Frequentes**: ambiente, benefícios, oportunidades, crescimento, equipe, salário, aprendizado, colaborativo, tecnologia, valorização
+**Tópicos Principais:**
+- Elevada satisfação com o ambiente de trabalho acolhedor e colaborativo
+- Apreciação dos benefícios e salários compatíveis ou acima da média do mercado
+- Reconhecimento das oportunidades de crescimento e desenvolvimento profissional
+- Valorização da cultura organizacional e do respeito mútuo entre colegas e gestores
+- Positividade em relação à infraestrutura e aos recursos tecnológicos disponíveis
+- Elogios à flexibilidade e dinamismo da empresa
+- Satisfação com o processo de capacitação e aprendizado contínuo
+- Apreciação da liderança acessível e do bom relacionamento interpessoal
+- Gratidão pelo reconhecimento e valorização do trabalho individual
+- Ausência de reclamações significativas ou pontos negativos destacados pelos funcionários

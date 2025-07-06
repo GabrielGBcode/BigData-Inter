@@ -25,7 +25,7 @@ def ensure_ollama_bge_m3():
         sys.exit(1)
 
 if __name__ == "__main__":
-    # 0. Garantir modelo do Ollama
+    # 0. Garantir modelos do Ollama
     ensure_ollama_bge_m3()
 
     # 1. Coleta dos dados do Glassdoor
@@ -42,5 +42,11 @@ if __name__ == "__main__":
 
     # 5. Gera gráfico do método do cotovelo
     run_script(os.path.join('scripts', 'metodo_cotovelo.py'))
+
+    # 6. Gera análise temporal dos clusters
+    run_script(os.path.join('scripts', 'analise_temporal_clusters.py'))
+
+    # 7. Gera resumos dos clusters com Ollama
+    run_script(os.path.join('scripts', 'resumo_clusters.py'))
 
     print("\nFluxo completo finalizado com sucesso!")

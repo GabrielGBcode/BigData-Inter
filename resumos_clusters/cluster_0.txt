@@ -1,0 +1,19 @@
+==============================
+CLUSTER: 0
+QUANTIDADE DE RECLAMAÇÕES: 304
+==============================
+
+Resumo do cluster:
+**Título do Cluster**: Sobrecarga de Trabalho e Falta de Reconhecimento
+**Palavras-Chave Frequentes**: sobrecarga, promoção, reconhecimento, plano de carreira, liderança, presencial, estresse, desvalorização, meritocracia, desorganização
+**Tópicos Principais:**
+- Exigências de alta performance com sobrecarga de trabalho, onde um funcionário realiza tarefas de múltiplos cargos.
+- Falta de reconhecimento e valorização do esforço e desempenho dos funcionários.
+- Promoções e aumentos salariais raros ou dependentes de relações pessoais e favoritismo, não de mérito.
+- Cultura organizacional tóxica com presença de nepotismo e favoritismo nas promoções.
+- Decisões unilaterais da liderança sobre mudanças no modelo de trabalho, especialmente a exigência de presencialidade sem infraestrutura adequada.
+- Desorganização interna e falta de clareza nos planos de carreira e processos de avaliação.
+- Gestores despreparados e falta de treinamento adequado para líderes.
+- Alta rotatividade de funcionários e demissões frequentes sem feedback ou acompanhamento adequado.
+- Condições de trabalho estressantes que afetam negativamente a saúde mental dos funcionários.
+- Percepção de estagnação na carreira, com longos períodos sem promoção ou progresso visível.
