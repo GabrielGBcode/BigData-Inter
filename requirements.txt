@@ -13,10 +13,3 @@ pyarrow
 fastparquet
 selenium
 webdriver-manager
-tkinter
-ast
-sys
-re
-hashlib
-time
-string
