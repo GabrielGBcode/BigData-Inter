@@ -10,4 +10,13 @@ matplotlib
 wordcloud
 nltk
 pyarrow
-fastparquet 
+fastparquet
+selenium
+webdriver-manager
+tkinter
+ast
+sys
+re
+hashlib
+time
+string
