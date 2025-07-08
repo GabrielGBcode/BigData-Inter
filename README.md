@@ -25,7 +25,6 @@ BD_trabalho/
 ├── processados/      # Dados processados (df_processado.pkl)
 ├── scripts/          # Scripts Python (ver abaixo)
 ├── requirements.txt  # Dependências do projeto
-├── .env              # Variáveis de ambiente (NÃO versionar)
 └── README.md         # Este arquivo
 ```
 
