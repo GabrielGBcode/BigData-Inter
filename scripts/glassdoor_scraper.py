@@ -15,6 +15,10 @@ from tkinter import simpledialog, messagebox
 from webdriver_manager.chrome import ChromeDriverManager
 import sys
 import re
+from dotenv import load_dotenv
+
+# Carrega variáveis do .env
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 # Defina a URL das avaliações do Inter no Glassdoor antes de usá-la
 reviews_url = "https://www.glassdoor.com.br/Avalia%C3%A7%C3%B5es/Inter-Avalia%C3%A7%C3%B5es-E2483031.htm"
@@ -133,78 +137,97 @@ def try_login(driver, wait, login_url, login_email, login_password):
             sys.exit(0)
         return False
 
-# Função para obter email e senha com validação local
+# Função para obter email e senha com validação local ou do .env
 def get_credentials():
-    def on_submit():
-        nonlocal email, senha
-        entered_email = email_var.get()
-        entered_senha = senha_var.get()
-        if not entered_email or not entered_senha:
-            # Alerta em primeiro plano
-            alert = tk.Tk()
-            alert.withdraw()
-            alert.attributes('-topmost', True)
-            messagebox.showerror("Campos obrigatórios", "Preencha o email e a senha.", parent=alert)
-            alert.destroy()
-            return
-        if not is_valid_email(entered_email):
-            alert = tk.Tk()
-            alert.withdraw()
-            alert.attributes('-topmost', True)
-            messagebox.showerror("Email inválido", "Por favor, insira um email válido.", parent=alert)
-            alert.destroy()
-            return
-        email = entered_email
-        senha = entered_senha
-        root.destroy()
+    email_env = os.getenv('EMAIL', '').strip()
+    senha_env = os.getenv('SENHA', '').strip()
+    if email_env and senha_env:
+        print('Usando email e senha do .env para login automático.')
+        return email_env, senha_env
+    else:
+        def on_submit():
+            nonlocal email, senha
+            entered_email = email_var.get()
+            entered_senha = senha_var.get()
+            if not entered_email or not entered_senha:
+                # Alerta em primeiro plano
+                alert = tk.Tk()
+                alert.withdraw()
+                alert.attributes('-topmost', True)
+                messagebox.showerror("Campos obrigatórios", "Preencha o email e a senha.", parent=alert)
+                alert.destroy()
+                return
+            if not is_valid_email(entered_email):
+                alert = tk.Tk()
+                alert.withdraw()
+                alert.attributes('-topmost', True)
+                messagebox.showerror("Email inválido", "Por favor, insira um email válido.", parent=alert)
+                alert.destroy()
+                return
+            email = entered_email
+            senha = entered_senha
+            root.destroy()
 
-    def is_valid_email(email):
-        # Regex robusta para validar e-mails (sem ponto antes do @, sem duplo ponto, etc)
-        return re.match(r'^(?!.*\.\.)[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]{0,62}[a-zA-Z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$', email)
+        def is_valid_email(email):
+            # Regex robusta para validar e-mails (sem ponto antes do @, sem duplo ponto, etc)
+            return re.match(r'^(?!.*\..)[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]{0,62}[a-zA-Z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$', email)
 
-    while True:
-        email = ''
-        senha = ''
-        root = tk.Tk()
-        root.title("Login Glassdoor")
-        root.geometry("400x220")
-        root.configure(bg="#f0f4f8")
-        root.resizable(False, False)
-        root.attributes('-topmost', True)
+        while True:
+            email = ''
+            senha = ''
+            root = tk.Tk()
+            root.title("Login Glassdoor")
+            root.geometry("400x220")
+            root.configure(bg="#f0f4f8")
+            root.resizable(False, False)
+            root.attributes('-topmost', True)
 
-        # Fonte personalizada
-        font_label = ("Segoe UI", 12, "bold")
-        font_entry = ("Segoe UI", 12)
-        font_button = ("Segoe UI", 12, "bold")
+            # Fonte personalizada
+            font_label = ("Segoe UI", 12, "bold")
+            font_entry = ("Segoe UI", 12)
+            font_button = ("Segoe UI", 12, "bold")
 
-        # Frame centralizado
-        frame = tk.Frame(root, bg="#f0f4f8")
-        frame.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+            # Frame centralizado
+            frame = tk.Frame(root, bg="#f0f4f8")
+            frame.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
-        tk.Label(frame, text="Email:", bg="#f0f4f8", fg="#333", font=font_label).grid(row=0, column=0, sticky="w", pady=(0,8))
-        email_var = tk.StringVar()
-        email_entry = tk.Entry(frame, textvariable=email_var, width=32, font=font_entry, bd=2, relief=tk.GROOVE)
-        email_entry.grid(row=1, column=0, pady=(0,16))
-        email_entry.focus()
+            tk.Label(frame, text="Email:", bg="#f0f4f8", fg="#333", font=font_label).grid(row=0, column=0, sticky="w", pady=(0,8))
+            email_var = tk.StringVar()
+            email_entry = tk.Entry(frame, textvariable=email_var, width=32, font=font_entry, bd=2, relief=tk.GROOVE)
+            email_entry.grid(row=1, column=0, pady=(0,16))
+            email_entry.focus()
 
-        tk.Label(frame, text="Senha:", bg="#f0f4f8", fg="#333", font=font_label).grid(row=2, column=0, sticky="w", pady=(0,8))
-        senha_var = tk.StringVar()
-        senha_entry = tk.Entry(frame, textvariable=senha_var, show='*', width=32, font=font_entry, bd=2, relief=tk.GROOVE)
-        senha_entry.grid(row=3, column=0, pady=(0,16))
+            tk.Label(frame, text="Senha:", bg="#f0f4f8", fg="#333", font=font_label).grid(row=2, column=0, sticky="w", pady=(0,8))
+            senha_var = tk.StringVar()
+            senha_entry = tk.Entry(frame, textvariable=senha_var, show='*', width=32, font=font_entry, bd=2, relief=tk.GROOVE)
+            senha_entry.grid(row=3, column=0, pady=(0,16))
 
-        btn = tk.Button(frame, text="Entrar", command=on_submit, bg="#1976d2", fg="white", font=font_button, bd=0, padx=10, pady=6, activebackground="#1565c0", activeforeground="white")
-        btn.grid(row=4, column=0, pady=(0,8))
+            btn = tk.Button(frame, text="Entrar", command=on_submit, bg="#1976d2", fg="white", font=font_button, bd=0, padx=10, pady=6, activebackground="#1565c0", activeforeground="white")
+            btn.grid(row=4, column=0, pady=(0,8))
 
-        # Permite pressionar Enter para submeter
-        root.bind('<Return>', lambda event: on_submit())
+            # Permite pressionar Enter para submeter
+            root.bind('<Return>', lambda event: on_submit())
 
-        root.mainloop()
+            root.mainloop()
 
-        # Se o usuário fechar a janela ou não digitar nada, encerrar o script
-        if not email or not senha:
-            print("Login cancelado pelo usuário.")
-            sys.exit(0)
-        return email, senha
+            # Se o usuário fechar a janela ou não digitar nada, encerrar o script
+            if not email or not senha:
+                print("Login cancelado pelo usuário.")
+                sys.exit(0)
+            return email, senha
+
+# Função para validar se está logado
+def is_logged_in(driver):
+    # Tenta acessar a página de avaliações
+    reviews_url = "https://www.glassdoor.com.br/Avalia%C3%A7%C3%B5es/Inter-Avalia%C3%A7%C3%B5es-E2483031.htm"
+    driver.get(reviews_url)
+    time.sleep(2)
+    # Verifica se algum elemento típico da página de avaliações está presente
+    try:
+        driver.find_element(By.XPATH, "//span[@data-test='review-avatar-label']")
+        return True
+    except:
+        return False
 
 # --- 1. Configuração do Selenium ---
 chrome_options = Options()
@@ -225,25 +248,37 @@ wait = WebDriverWait(driver, 15)
 while True:
     login_email, login_password = get_credentials()
     login_ok = try_login(driver, wait, login_url, login_email, login_password)
-    if login_ok:
+    if login_ok and is_logged_in(driver):
         print("Login realizado com sucesso!")
         break
     else:
-        # Se o navegador foi fechado manualmente
-        if not driver.service.is_connectable():
-            print("Navegador fechado pelo usuário. Encerrando o script.")
-            sys.exit(0)
-        # Pergunta se deseja tentar novamente
-        root = tk.Tk()
-        root.withdraw()
-        root.attributes('-topmost', True)
-        retry = messagebox.askretrycancel("Erro de Login", "Email ou senha incorretos. Deseja tentar novamente?", parent=root)
-        root.destroy()
-        if not retry:
-            print("Login cancelado pelo usuário.")
-            driver.quit()
-            sys.exit(0)
-        # Se o usuário quiser tentar novamente, o loop volta ao início e chama get_credentials() novamente
+        print("Falha no login. Verifique email, senha ou possíveis captchas.")
+        # Permitir login manual
+        print("\nVocê pode tentar fazer o login manualmente no navegador automatizado aberto.")
+        print("Após logar manualmente (e resolver qualquer captcha), pressione Enter aqui para continuar...")
+        input("Pressione Enter para continuar...")
+        # Após login manual, navega para a página de avaliações
+        driver.get(reviews_url)
+        if is_logged_in(driver):
+            print("Login manual detectado com sucesso! Continuando o scraping...")
+            break
+        else:
+            print("Login manual não detectado. Deseja tentar novamente?")
+            # Se o navegador foi fechado manualmente
+            if not driver.service.is_connectable():
+                print("Navegador fechado pelo usuário. Encerrando o script.")
+                sys.exit(0)
+            # Pergunta se deseja tentar novamente
+            root = tk.Tk()
+            root.withdraw()
+            root.attributes('-topmost', True)
+            retry = messagebox.askretrycancel("Erro de Login", "Login não detectado. Deseja tentar novamente?", parent=root)
+            root.destroy()
+            if not retry:
+                print("Login cancelado pelo usuário.")
+                driver.quit()
+                sys.exit(0)
+            # Se o usuário quiser tentar novamente, o loop volta ao início e chama get_credentials() novamente
 
 # Só depois do login bem-sucedido, acessar a página de avaliações
 print(f"Navegando para: {reviews_url}")
@@ -291,13 +326,33 @@ while True:
                         data_publicacao = data_el.text.strip()
                     except:
                         data_publicacao = ""
-                    reviews_data.append({
-                        "funcao": funcao,
-                        "avaliacao": avaliacao_final,
-                        "data": data_publicacao
-                    })
-                    seen_review_hashes.add(current_review_hash)
-                    new_reviews_this_iteration += 1
+                    # Coleta da localização (busca todos os candidatos e pega o que for Cidade, UF)
+                    localizacao = ""
+                    try:
+                        localizacoes_possiveis = review_el.find_elements(
+                            By.XPATH,
+                            ".//div[contains(@class, 'text-with-icon_LabelContainer__') and contains(@class, 'text-with-icon_disableTruncationMobile__')]"
+                        )
+                        for el in localizacoes_possiveis:
+                            texto = el.text.strip()
+                            print("Texto extraído:", texto)  # DEPURAÇÃO
+                            if re.match(r'.+,\s*[A-Z]{2}$', texto):
+                                localizacao = texto
+                                break
+                        print("Localização salva:", localizacao)  # DEPURAÇÃO
+                    except Exception as e:
+                        print("Erro ao extrair localização:", e)
+                        localizacao = ""
+                    # Só adiciona se houver localização válida
+                    if localizacao:
+                        reviews_data.append({
+                            "funcao": funcao,
+                            "avaliacao": avaliacao_final,
+                            "data": data_publicacao,
+                            "localizacao": localizacao
+                        })
+                        seen_review_hashes.add(current_review_hash)
+                        new_reviews_this_iteration += 1
             except Exception as e:
                 print(f"Erro ao processar uma avaliação: {e}")
                 continue
@@ -342,5 +397,9 @@ if reviews_data:
     output_parquet_file = os.path.join('data', 'avaliacoes_inter.parquet')
     df_reviews.to_parquet(output_parquet_file, index=False)
     print(f"\nDados salvos em '{output_parquet_file}' com sucesso!")
+    # Após criar o DataFrame df_reviews, conte quantas localizações válidas foram coletadas
+    print(f"Total de avaliações coletadas com localização válida: {len(df_reviews)}")
+    print("Contagem de localizações no DataFrame:")
+    print(df_reviews['localizacao'].value_counts(dropna=False))
 else:
     print("Nenhuma avaliação foi coletada.")

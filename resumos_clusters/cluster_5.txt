@@ -1,19 +1,24 @@
 ==============================
 CLUSTER: 5
-QUANTIDADE DE RECLAMAÇÕES: 274
+QUANTIDADE DE RECLAMAÇÕES: 210
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Problemas de Gestão e Progressão de Carreira
-**Palavras-Chave Frequentes**: gestão, promoção, carreira, transparência, pressão, metas, ambiente, feedback, liderança, burocracia
+**Título do Cluster**: Ambiente de trabalho e desenvolvimento profissional
+
+**Palavras-Chave Frequentes**: ambiente de trabalho, sobrecarga, burnout, cultura organizacional, promoções, liderança, valorização, reconhecimento, crescimento profissional
+
 **Tópicos Principais:**
-- Falta de transparência e clareza nos critérios de promoção e méritos
-- Pressão excessiva para atingir metas, muitas vezes consideradas abusivas
-- Ambiente de trabalho percebido como tóxico e competitivo
-- Gestão autoritária e favoritismo, com promoções baseadas em relações pessoais
-- Falta de feedback constante e construtivo
-- Burocracia excessiva e lentidão nos processos de movimentação de carreira
-- Falta de apoio e ineficiência do RH em lidar com questões dos funcionários
-- Decisões de gestão top-down sem envolvimento ou consideração das equipes
-- Cultura de "quem grita mais ganha" e panelinhas influenciando o crescimento
-- Instabilidade de carreira com mudanças frequentes e falta de segurança no emprego
+- Sobrecarga de trabalho e pressão por alta performance
+- Falta de clareza nos critérios de promoção e desenvolvimento de carreira
+- Cultura organizacional desigual e baseada em favoritismos
+- Desmotivação e desvalorização dos funcionários
+- Decisões top-down sem consulta aos colaboradores
+- Retorno ao trabalho presencial sem estrutura adequada
+- Falta de transparência e comunicação interna
+- Ausência de plano de carreira e feedback constante
+- Impacto negativo na saúde mental e qualidade de vida dos funcionários
+- Falta de preparo e qualificação da liderança
+- Desigualdade de oportunidades e promoções baseadas em relações pessoais
+
+Essas reclamações refletem um ambiente organizacional marcado por desafios relacionados à cultura, liderança, reconhecimento e desenvolvimento profissional, evidenciando a necessidade de melhorias nos processos internos e na valorização dos colaboradores.

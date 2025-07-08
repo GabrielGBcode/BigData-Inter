@@ -8,7 +8,7 @@ import tiktoken
 from openai import OpenAIError, RateLimitError
 
 # ======= CONFIGURAÇÕES =======
-MODEL_NAME = 'gpt-4-turbo'
+MODEL_NAME = 'gpt-3.5-turbo'
 MAX_TOKENS = 16000
 MAX_TOKENS_RESPOSTA = 2000  # reserva para resposta
 MAX_TOKENS_PROMPT = MAX_TOKENS - MAX_TOKENS_RESPOSTA

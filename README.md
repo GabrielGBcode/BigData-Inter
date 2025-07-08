@@ -50,13 +50,22 @@ pip install -r requirements.txt
 
 ### 2. Configure o arquivo `.env`
 
-Crie um arquivo `.env` na raiz do projeto com:
+Crie um arquivo `.env` dentro da pasta `scripts/` com:
 
 ```
-OPENAI_API_KEY=sua_chave_aqui
+EMAIL=seu@email.com
+SENHA=suaSenhaAqui
 ```
 
-> **Importante:** Nunca versionar o `.env`! Adicione `**/.env` ao `.gitignore` se necessário.
+Se algum dos campos estiver vazio, o sistema irá solicitar manualmente o email e senha na interface gráfica.
+
+> **Importante:** Nunca versionar o `.env`! Adicione `scripts/.env` ao `.gitignore` se necessário.
+
+### 3. Coleta de localização e análise regional
+
+- O scraper coleta automaticamente a localização (cidade, UF) de cada avaliação, ignorando avaliações sem localização válida.
+- A análise regional por cluster é feita automaticamente, gerando gráficos de incidência por cidade/estado para cada cluster.
+- Os gráficos são salvos em `imagens/` com o nome `reclamacoes_cluster_X_por_regiao.png`.
 
 ### 3. Execute o pipeline completo
 

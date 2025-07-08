@@ -49,4 +49,7 @@ if __name__ == "__main__":
     # 7. Gera resumos dos clusters com Ollama
     run_script(os.path.join('scripts', 'resumo_clusters.py'))
 
+    # 8. Gera análise regional das reclamações
+    run_script(os.path.join('scripts', 'analise_regional_reclamacoes.py'))
+
     print("\nFluxo completo finalizado com sucesso!")

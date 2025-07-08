@@ -1,19 +1,19 @@
 ==============================
 CLUSTER: 4
-QUANTIDADE DE RECLAMAÇÕES: 277
+QUANTIDADE DE RECLAMAÇÕES: 116
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Problemas de Gestão e Cultura Organizacional
-**Palavras-Chave Frequentes**: gestão, cultura, transparência, reconhecimento, promoção, comunicação, liderança, valorização, meritocracia, desorganização
+**Título do Cluster**: Falta de plano de carreira
+**Palavras-Chave Frequentes**: plano, carreira, crescimento, promoção, metas, oportunidades, liderança, desenvolvimento, valorização, salário
 **Tópicos Principais:**
-- Falta de transparência e comunicação efetiva entre gestão e funcionários
-- Gestão percebida como desorganizada e muitas vezes despreparada
-- Cultura de favoritismo e nepotismo nas promoções, falta de meritocracia
-- Sentimento de estagnação na carreira devido a promoções limitadas e critérios pouco claros
-- Lideranças consideradas autoritárias, pouco empáticas ou tecnicamente despreparadas
-- Decisões arbitrárias e top-down que desmotivam os funcionários
-- Falta de reconhecimento e valorização do desempenho individual
-- Comunicação interna deficiente, gerando confusão e falta de direcionamento
-- Cultura organizacional percebida como problemática, com falta de foco em pessoas
-- Processos internos burocráticos e engessados que impedem a inovação e agilidade
+- Falta de plano de carreira estruturado
+- Ausência de critérios claros para promoções
+- Sentimento de estagnação profissional
+- Pouca transparência nos processos internos
+- Falta de valorização do desempenho individual
+- Dificuldade em identificar caminhos de crescimento
+- Desmotivação por falta de reconhecimento
+- Baixa mobilidade interna
+- Falta de feedback constante
+- Contratações externas em vez de promoções internas

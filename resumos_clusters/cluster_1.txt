@@ -1,19 +1,19 @@
 ==============================
 CLUSTER: 1
-QUANTIDADE DE RECLAMAÇÕES: 113
+QUANTIDADE DE RECLAMAÇÕES: 43
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Insatisfação com o Modelo de Trabalho Presencial  
-**Palavras-Chave Frequentes**: presencial, híbrido, remoto, flexibilidade, tecnologia, inovação, decisões, promoções, carreira, comunicação  
-**Tópicos Principais:**  
-- Predominância de um modelo de trabalho 100% presencial, mesmo em funções que poderiam ser executadas remotamente  
-- Falta de opções de trabalho híbrido ou remoto, mesmo após experiências positivas durante a pandemia  
-- Insatisfação com a inflexibilidade da empresa em adaptar-se às novas tendências de trabalho remoto  
-- Decisões arbitrárias e frequentes mudanças nas políticas de trabalho presencial  
-- Sentimento de desconexão entre a liderança e as necessidades dos funcionários  
-- Falta de consideração pelas preferências dos funcionários na escolha do modelo de trabalho  
-- Impacto negativo da obrigatoriedade do presencial na satisfação e no bem-estar dos funcionários  
-- Relatos de que o trabalho presencial é uma exigência mesmo para novos contratados inicialmente prometidos como remotos  
-- Críticas à gestão por não ser transparente e não dialogar sobre as mudanças no modelo de trabalho  
-- Descontentamento com a falta de estacionamento e outras infraestruturas de suporte ao modelo presencial
+**Título do Cluster**: Falta de plano de carreira
+**Palavras-Chave Frequentes**: plano, carreira, crescimento, promoção, metas, oportunidades, liderança, desenvolvimento, valorização, salário
+**Tópicos Principais:**
+- Falta de plano de carreira estruturado
+- Ausência de critérios claros para promoções
+- Sentimento de estagnação profissional
+- Pouca transparência nos processos internos
+- Falta de valorização do desempenho individual
+- Dificuldade em identificar caminhos de crescimento
+- Desmotivação por falta de reconhecimento
+- Baixa mobilidade interna
+- Falta de feedback constante
+- Contratações externas em vez de promoções internas

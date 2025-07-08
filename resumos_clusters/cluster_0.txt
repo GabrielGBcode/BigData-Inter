@@ -1,19 +1,21 @@
 ==============================
 CLUSTER: 0
-QUANTIDADE DE RECLAMAÇÕES: 304
+QUANTIDADE DE RECLAMAÇÕES: 37
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Sobrecarga de Trabalho e Falta de Reconhecimento
-**Palavras-Chave Frequentes**: sobrecarga, promoção, reconhecimento, plano de carreira, liderança, presencial, estresse, desvalorização, meritocracia, desorganização
+**Título do Cluster**: Ambiente de trabalho positivo e oportunidades de crescimento
+**Palavras-Chave Frequentes**: ambiente, colaborativo, motivador, evolução profissional, oportunidades, crescimento, benefícios, salário, aprendizado, reconhecimento
 **Tópicos Principais:**
-- Exigências de alta performance com sobrecarga de trabalho, onde um funcionário realiza tarefas de múltiplos cargos.
-- Falta de reconhecimento e valorização do esforço e desempenho dos funcionários.
-- Promoções e aumentos salariais raros ou dependentes de relações pessoais e favoritismo, não de mérito.
-- Cultura organizacional tóxica com presença de nepotismo e favoritismo nas promoções.
-- Decisões unilaterais da liderança sobre mudanças no modelo de trabalho, especialmente a exigência de presencialidade sem infraestrutura adequada.
-- Desorganização interna e falta de clareza nos planos de carreira e processos de avaliação.
-- Gestores despreparados e falta de treinamento adequado para líderes.
-- Alta rotatividade de funcionários e demissões frequentes sem feedback ou acompanhamento adequado.
-- Condições de trabalho estressantes que afetam negativamente a saúde mental dos funcionários.
-- Percepção de estagnação na carreira, com longos períodos sem promoção ou progresso visível.
+- Ambiente acolhedor e motivador
+- Oportunidades de crescimento e desenvolvimento profissional
+- Reconhecimento e valorização dos funcionários
+- Benefícios atrativos e salário compatível com o mercado
+- Aprendizado constante e troca de experiências enriquecedoras
+- Clima organizacional favorável ao trabalho em equipe
+- Flexibilidade e liberdade para inovação e crescimento
+- Processos de desligamento rápidos e digitais
+- Ambiente tecnológico e desafiador
+- Cultura de colaboração e parceria entre os colaboradores
+
+Essas reclamações refletem um ambiente de trabalho positivo, com destaque para a valorização dos funcionários, oportunidades de crescimento, benefícios atrativos e clima organizacional favorável. Os colaboradores mencionam a satisfação com o aprendizado, a colaboração em equipe e a liberdade para inovação. Além disso, ressaltam a importância do reconhecimento e do ambiente motivador para o desenvolvimento profissional. A empresa parece proporcionar um ambiente propício para o crescimento e a realização pessoal dos colaboradores.

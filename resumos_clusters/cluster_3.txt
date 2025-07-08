@@ -1,21 +1,23 @@
 ==============================
 CLUSTER: 3
-QUANTIDADE DE RECLAMAÇÕES: 115
+QUANTIDADE DE RECLAMAÇÕES: 87
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Insatisfação com a política de trabalho remoto e perspectivas de crescimento limitadas
+**Título do Cluster**: Modelo de trabalho 100% presencial
 
-**Palavras-Chave Frequentes**: home office, crescimento, promoção, reconhecimento, gestão, pressão, cobrança, ambiente, benefícios, trabalho remoto
+**Palavras-Chave Frequentes**: presencial, home office, híbrido, flexibilidade, benefícios, salário, ambiente de trabalho, liderança
 
 **Tópicos Principais:**
-- Insatisfação generalizada com a eliminação ou não implementação do trabalho remoto
-- Falta de perspectiva de crescimento e promoção dentro da empresa
-- Reconhecimento insuficiente do trabalho e esforço dos funcionários
-- Gestão percebida como desconectada ou pouco apoiadora
-- Ambiente de trabalho pressionizado com alta cobrança
-- Benefícios considerados bons, mas não compensam outras deficiências
-- Falta de flexibilidade nos benefícios e condições de trabalho
-- Comunicação interna ineficaz e falta de transparência
-- Políticas de gestão de pessoas vistas como atrasadas ou ineficazes
-- Descontentamento com a liderança e decisões unilaterais da direção
+- Insatisfação com o trabalho 100% presencial
+- Falta de opção de modelo híbrido ou home office
+- Retorno ao presencial sem aviso prévio
+- Desafios de adaptação ao regime presencial
+- Dificuldade em conciliar vida pessoal e profissional devido ao presencial
+- Necessidade de flexibilidade no formato de trabalho
+- Impacto negativo na qualidade de vida dos funcionários devido ao presencial
+- Preferência por modelos de trabalho mais flexíveis
+- Contraste entre a cultura de trabalho presencial e as expectativas dos colaboradores
+- Desejo por maior autonomia na escolha do formato de trabalho
+
+Este cluster de reclamações dos funcionários destaca a insatisfação generalizada com o modelo de trabalho 100% presencial adotado pela empresa. Os colaboradores expressam a necessidade de maior flexibilidade, seja por meio de um modelo híbrido ou de trabalho remoto. O retorno repentino ao presencial, sem aviso prévio, gerou desconforto e impactos negativos na qualidade de vida e na conciliação entre vida pessoal e profissional. Além disso, a falta de opções de trabalho flexível contrasta com as expectativas dos funcionários, que buscam autonomia na escolha do formato de trabalho. Essas questões evidenciam a importância de repensar e adaptar o modelo de trabalho da empresa para atender às necessidades e expectativas dos colaboradores.
