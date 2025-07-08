@@ -4,16 +4,14 @@ QUANTIDADE DE RECLAMAÇÕES: 43
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Falta de plano de carreira
-**Palavras-Chave Frequentes**: plano, carreira, crescimento, promoção, metas, oportunidades, liderança, desenvolvimento, valorização, salário
+**Título do Cluster**: Desafios de Crescimento e Flexibilidade em Ambiente em Evolução
+
+**Palavras-Chave Frequentes**: plano de carreira, presencial, benefícios, salário, ambiente, crescimento, flexibilidade, gestão, tecnologia, oportunidades, motivação, progressão, carreira, RH
+
 **Tópicos Principais:**
-- Falta de plano de carreira estruturado
-- Ausência de critérios claros para promoções
-- Sentimento de estagnação profissional
-- Pouca transparência nos processos internos
-- Falta de valorização do desempenho individual
-- Dificuldade em identificar caminhos de crescimento
-- Desmotivação por falta de reconhecimento
-- Baixa mobilidade interna
-- Falta de feedback constante
-- Contratações externas em vez de promoções internas
+
+- **Ausência/Inexistência de Plano de Carreira:** Este é o ponto mais recorrente e crítico nas reclamações. A falta de um plano de carreira claro e definido gera desmotivação, dificulta a progressão e a percepção de oportunidades de crescimento, levando a um sentimento de estagnação profissional. A falta de direcionamento e critérios claros para promoções é um problema central.
+- **Dilema Presencial vs. Flexibilidade:** A volta ao modelo presencial é um ponto negativo frequente, impactando a qualidade de vida e a possibilidade de trabalho remoto para funcionários que não residem na sede da empresa (BH). A falta de flexibilidade é vista como um fator limitante.
+- **Pontos Positivos e Contradições:** Apesar das críticas, há reconhecimento de que a empresa oferece bons salários, benefícios, ambiente de trabalho agradável, tecnologias modernas e oportunidades de aprendizado. No entanto, a experiência positiva é muitas vezes atenuada pela falta de estrutura e planejamento para sustentar esse crescimento e desenvolver os funcionários. Há uma percepção de que o marketing da empresa é mais atraente do que a realidade.
+- **Desafios de Gestão e Recursos Humanos:** Há menções a gestão comercial ruim, cultura de líderes ineficientes, RH distante dos funcionários e falta de treinamento. A impressão é de uma empresa em fase de crescimento, com processos e estruturas ainda em desenvolvimento.
+- **Oportunidades de Crescimento Limitadas:** A percepção de que o crescimento profissional depende muito da iniciativa individual e da disposição para ir além do escopo de atuação, sem um direcionamento claro da empresa, indica um problema de estruturação das oportunidades.

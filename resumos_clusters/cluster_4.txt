@@ -4,16 +4,12 @@ QUANTIDADE DE RECLAMAÇÕES: 116
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Falta de plano de carreira
-**Palavras-Chave Frequentes**: plano, carreira, crescimento, promoção, metas, oportunidades, liderança, desenvolvimento, valorização, salário
+**Título do Cluster**: Crescimento, Benefícios e Cultura Interna em Contraste
+
+**Palavras-Chave Frequentes**: Crescimento, Benefícios, Salário, Cultura, Promoção, Ambiente, Gestão, Empresa, Desenvolvimento, Tecnologia, Sindicato, Dinâmico, Top/Down.
+
 **Tópicos Principais:**
-- Falta de plano de carreira estruturado
-- Ausência de critérios claros para promoções
-- Sentimento de estagnação profissional
-- Pouca transparência nos processos internos
-- Falta de valorização do desempenho individual
-- Dificuldade em identificar caminhos de crescimento
-- Desmotivação por falta de reconhecimento
-- Baixa mobilidade interna
-- Falta de feedback constante
-- Contratações externas em vez de promoções internas
+
+- **Benefícios e Remuneração:** Existe uma percepção geral de que a empresa oferece bons benefícios (plano de saúde, vale alimentação/refeição, direitos bancários garantidos pelo sindicato) e, em alguns casos, salários competitivos (especialmente no mercado mineiro). No entanto, há queixas sobre salários defasados em relação ao mercado, baixa participação nos lucros e a falta de transparência em relação a méritos e promoções.
+- **Crescimento e Desenvolvimento de Carreira:**  O potencial de crescimento dentro da empresa é frequentemente citado como um ponto positivo, com oportunidades de aprendizado e desenvolvimento. No entanto,  há frustração com a lentidão na progressão de carreira, a dificuldade em obter promoções e a percepção de que o crescimento depende mais de relações pessoais e "bujulação" do que de desempenho. A gestão "top/down" e a falta de autonomia são fatores que contribuem para a insatisfação com o crescimento profissional.
+- **Ambiente de Trabalho e Cultura Organizacional:** As opiniões sobre o ambiente de trabalho são mistas. Há relatos de ambientes agradáveis, dinâmicos e com equipes solicitas, além de autonomia. Contudo, a cultura interna também é criticada, com menções a um ambiente tóxico, "panelinha", apropriação de privilégios por certos grupos (especialmente na área de TI) e a influência de uma estrutura familiar ainda presente, que pode favorecer certos funcionários. Há preocupação com a percepção de que vínculos sociais influenciam as oportunidades de carreira.

@@ -4,20 +4,13 @@ QUANTIDADE DE RECLAMAÇÕES: 112
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Falta de transparência e valorização dos colaboradores
+**Título do Cluster**: Desafios de Gestão e Valorização em um Ambiente de Crescimento
 
-**Palavras-Chave Frequentes**: transparência, valorização, benefícios, salário, gestão, promoções, cultura organizacional, feedback, reconhecimento, crescimento
+**Palavras-Chave Frequentes**: Valorização, Transparência, Gestão, Falta, Promoção, Benefícios, Processos, Liderança, Autonomia, Crescimento, Cultura, Desorganização, Preocupação, Bem-estar, Comunicação, Autonomia, Requisitos, Desprezo.
 
 **Tópicos Principais:**
-- Falta de transparência nas decisões e processos internos
-- Ausência de valorização dos colaboradores
-- Dificuldade em identificar oportunidades de crescimento e promoções
-- Gestão pessoal e falta de cultura organizacional
-- Desmotivação por falta de reconhecimento e feedback
-- Processos engessados e burocráticos
-- Política de promoção baseada em QI (Quem Indica)
-- Baixa clareza nas mudanças e decisões da empresa
-- Falta de comunicação interna eficaz
-- Desorganização e falta de estrutura nos processos
 
-Essa análise revela um padrão consistente de reclamações relacionadas à falta de transparência, valorização dos colaboradores e processos organizacionais. Esses pontos podem impactar diretamente no engajamento, motivação e retenção dos funcionários, sendo essencial que a empresa busque melhorias nessas áreas para promover um ambiente de trabalho mais saudável e produtivo.
+- **Ambiente de Trabalho e Benefícios:** Há um consenso sobre a existência de bons benefícios (VR/VA, PLR competitivo), boa estrutura física e um relacionamento positivo entre equipes. No entanto, esses pontos positivos são frequentemente ofuscados por preocupações relacionadas à valorização do colaborador.
+- **Problemas de Gestão e Liderança:** Um dos temas mais recorrentes é a ineficiência da gestão e a falta de transparência na comunicação. Há críticas à gestão pessoal, decisões pouco transparentes, falta de autonomia, liderança pouco comunicativa, gestão autoritária e a priorização do lucro em detrimento do bem-estar dos funcionários.
+- **Oportunidades de Crescimento Limitadas:** Apesar de oferecer aprendizado, desenvolvimento técnico e boa estrutura, a progressão na carreira é frequentemente vista como ruim, lenta ou baseada em critérios questionáveis (QI). A falta de valorização do desempenho individual e a política de promoções inconsistente geram desmotivação.
+- **Rigidez e Burocracia:**  A existência de processos engessados, burocracia excessiva e a imposição de requisitos de ponto e presença (retorno ao presencial) demonstram uma falta de flexibilidade e adaptação às necessidades dos funcionários, criando um ambiente de trabalho menos dinâmico e inovador.

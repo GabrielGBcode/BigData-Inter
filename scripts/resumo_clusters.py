@@ -1,82 +1,73 @@
-import openai
 import pandas as pd
 import os
 import time
+import requests
 from dotenv import load_dotenv
 from pathlib import Path
-import tiktoken
-from openai import OpenAIError, RateLimitError
 
 # ======= CONFIGURAÇÕES =======
-MODEL_NAME = 'gpt-3.5-turbo'
-MAX_TOKENS = 16000
-MAX_TOKENS_RESPOSTA = 2000  # reserva para resposta
-MAX_TOKENS_PROMPT = MAX_TOKENS - MAX_TOKENS_RESPOSTA
+OLLAMA_URL = "http://localhost:11434/api/chat"
+OLLAMA_MODEL = "gemma3:12b"
+MAX_TENTATIVAS = 3
 CAMINHO_DF = "processados/df_processado.pkl"
 PASTA_SAIDA = 'resumos_clusters'
-MAX_TENTATIVAS = 3
+MAX_TEXTOS_CLUSTER = 20  # Limite de textos enviados por cluster
 
 # ======= CARREGAR .env =======
 dotenv_path = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path)
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Força uso de GPU ou CPU conforme variável de ambiente ou .env
+OLLAMA_USE_GPU = os.getenv('OLLAMA_USE_GPU', '1')  # Padrão: usar GPU
+os.environ['OLLAMA_USE_GPU'] = OLLAMA_USE_GPU
 
 # ======= FUNÇÕES =======
-
-# Inicializa o codificador de tokens
-tokenizer = tiktoken.encoding_for_model(MODEL_NAME)
-
-def contar_tokens(texto: str) -> int:
-    return len(tokenizer.encode(texto))
-
 def gerar_prompt(cluster_id: int, textos: list[str]) -> str:
-    exemplo = (
-        "**Título do Cluster**: Falta de plano de carreira\n"
-        "**Palavras-Chave Frequentes**: plano, carreira, crescimento, promoção, metas, oportunidades, liderança, desenvolvimento, valorização, salário\n"
-        "**Tópicos Principais:**\n"
-        "- Falta de plano de carreira estruturado\n"
-        "- Ausência de critérios claros para promoções\n"
-        "- Sentimento de estagnação profissional\n"
-        "- Pouca transparência nos processos internos\n"
-        "- Falta de valorização do desempenho individual\n"
-        "- Dificuldade em identificar caminhos de crescimento\n"
-        "- Desmotivação por falta de reconhecimento\n"
-        "- Baixa mobilidade interna\n"
-        "- Falta de feedback constante\n"
-        "- Contratações externas em vez de promoções internas\n"
-    )
-
     prompt_inicial = (
-        "Você é um analista organizacional. Analise o seguinte grupo de reclamações de funcionários do mesmo cluster.\n"
-        "IMPORTANTE: Responda EXCLUSIVAMENTE em **português do Brasil** e siga ESTRITAMENTE o modelo abaixo.\n"
-        "Se você responder em outro idioma ou fora do formato, a resposta será descartada.\n\n"
-        "=== MODELO DE RESPOSTA QUE VOCÊ DEVE IMITAR ===\n\n"
-        + exemplo +
-        "\n=== FIM DO MODELO ===\n\n"
-        "Agora, gere a resposta para o seguinte conjunto de reclamações:\n\n"
+        "Analise o grupo de reclamações abaixo e gere um resumo OBRIGATORIAMENTE neste formato:\n\n"
+        "**Título do Cluster**: ...\n"
+        "**Palavras-Chave Frequentes**: ...\n"
+        "**Tópicos Principais:**\n"
+        "- ...\n"
+        "- ...\n"
+        "- ...\n\n"
         "Textos:\n"
     )
-
-    # Adiciona textos até atingir o limite de tokens
-    prompt_tokens = contar_tokens(prompt_inicial)
-    textos_selecionados = []
-    tokens_atuais = prompt_tokens
-
-    for texto in textos:
-        tokens_texto = contar_tokens(texto) + 1  # inclui quebra de linha
-        if tokens_atuais + tokens_texto > MAX_TOKENS_PROMPT:
-            break
-        textos_selecionados.append(texto)
-        tokens_atuais += tokens_texto
-
-    return prompt_inicial + "\n".join(textos_selecionados)
+    # Limita o número de textos enviados para clusters grandes
+    textos = textos[:MAX_TEXTOS_CLUSTER]
+    return prompt_inicial + "\n".join(textos)
 
 def resposta_esta_no_formato(resumo: str) -> bool:
-    return all(bloco in resumo for bloco in [
-        "**Título do Cluster**:",
-        "**Palavras-Chave Frequentes**:",
-        "**Tópicos Principais:**"
-    ])
+    resumo = resumo.lower()
+    return (
+        "título do cluster" in resumo and
+        ("palavras-chave" in resumo or "palavras chave" in resumo) and
+        "tópicos principais" in resumo
+    )
+
+def reformatar_resposta(resumo: str) -> str:
+    # Tenta reformatar respostas quase corretas para o padrão desejado
+    linhas = resumo.splitlines()
+    novo = []
+    encontrou_titulo = False
+    encontrou_palavras = False
+    encontrou_topicos = False
+    for linha in linhas:
+        l = linha.strip().lower()
+        if not encontrou_titulo and ("título do cluster" in l or "titulo do cluster" in l):
+            novo.append("**Título do Cluster**: " + linha.split(":",1)[-1].strip())
+            encontrou_titulo = True
+        elif not encontrou_palavras and ("palavras-chave" in l or "palavras chave" in l):
+            novo.append("**Palavras-Chave Frequentes**: " + linha.split(":",1)[-1].strip())
+            encontrou_palavras = True
+        elif not encontrou_topicos and ("tópicos principais" in l or "topicos principais" in l):
+            novo.append("**Tópicos Principais:**")
+            encontrou_topicos = True
+        elif encontrou_topicos and linha.strip().startswith("-"):
+            novo.append(linha)
+        elif encontrou_topicos and linha.strip() and not linha.strip().startswith("-"):
+            novo.append("- " + linha.strip())
+    return "\n".join(novo)
 
 def salvar_resumo(cluster: int, conteudo: str, qtd_reclamacoes: int):
     os.makedirs(PASTA_SAIDA, exist_ok=True)
@@ -91,16 +82,18 @@ def salvar_resumo(cluster: int, conteudo: str, qtd_reclamacoes: int):
         f.write("\n")
     print(f"✅ Resumo do cluster {cluster} salvo em: {path}")
 
-def chamar_chatgpt(prompt: str) -> str:
-    response = openai.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
+def chamar_ollama(prompt: str) -> str:
+    payload = {
+        "model": OLLAMA_MODEL,
+        "messages": [
             {"role": "system", "content": "Você é um analista organizacional experiente. Responda em português."},
             {"role": "user", "content": prompt}
         ],
-        temperature=0.3
-    )
-    return response.choices[0].message.content.strip()
+        "stream": False
+    }
+    response = requests.post(OLLAMA_URL, json=payload)
+    response.raise_for_status()
+    return response.json()["message"]["content"].strip()
 
 # ======= EXECUÇÃO PRINCIPAL =======
 if __name__ == "__main__":
@@ -113,23 +106,22 @@ if __name__ == "__main__":
 
         for tentativa in range(1, MAX_TENTATIVAS + 1):
             try:
-                resposta = chamar_chatgpt(prompt)
+                resposta = chamar_ollama(prompt)
                 if resposta_esta_no_formato(resposta):
                     salvar_resumo(cluster, resposta, qtd_reclamacoes)
                     break
                 else:
+                    # Tenta reformatar automaticamente
+                    resposta_reformatada = reformatar_resposta(resposta)
+                    if resposta_esta_no_formato(resposta_reformatada):
+                        salvar_resumo(cluster, resposta_reformatada, qtd_reclamacoes)
+                        break
                     print(f"⚠️ Tentativa {tentativa}: resposta fora do formato.")
                     prompt = (
                         "A resposta abaixo está fora do formato esperado. Reescreva no formato mostrado acima "
                         "(com os blocos '**Título do Cluster**', '**Palavras-Chave Frequentes**', '**Tópicos Principais**'), "
                         "e mantenha tudo em português do Brasil:\n\n" + resposta
                     )
-            except RateLimitError:
-                print("⏳ Limite de requisições atingido. Aguardando 60 segundos...")
-                time.sleep(60)
-            except OpenAIError as e:
-                print(f"❌ Erro da OpenAI na tentativa {tentativa} para cluster {cluster}: {e}")
-                time.sleep(3)
             except Exception as e:
                 print(f"❌ Erro inesperado na tentativa {tentativa} para cluster {cluster}: {e}")
                 time.sleep(3)

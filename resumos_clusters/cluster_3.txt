@@ -4,20 +4,18 @@ QUANTIDADE DE RECLAMAÇÕES: 87
 ==============================
 
 Resumo do cluster:
-**Título do Cluster**: Modelo de trabalho 100% presencial
+**Título do Cluster**: Conflito entre Modernidade e Rigidez Presencial
 
-**Palavras-Chave Frequentes**: presencial, home office, híbrido, flexibilidade, benefícios, salário, ambiente de trabalho, liderança
+**Palavras-Chave Frequentes**: presencial, benefícios, ambiente, cultura, tecnologia, trabalho, salário, progressão, carreira, estrutura, flexibilidade.
 
 **Tópicos Principais:**
-- Insatisfação com o trabalho 100% presencial
-- Falta de opção de modelo híbrido ou home office
-- Retorno ao presencial sem aviso prévio
-- Desafios de adaptação ao regime presencial
-- Dificuldade em conciliar vida pessoal e profissional devido ao presencial
-- Necessidade de flexibilidade no formato de trabalho
-- Impacto negativo na qualidade de vida dos funcionários devido ao presencial
-- Preferência por modelos de trabalho mais flexíveis
-- Contraste entre a cultura de trabalho presencial e as expectativas dos colaboradores
-- Desejo por maior autonomia na escolha do formato de trabalho
 
-Este cluster de reclamações dos funcionários destaca a insatisfação generalizada com o modelo de trabalho 100% presencial adotado pela empresa. Os colaboradores expressam a necessidade de maior flexibilidade, seja por meio de um modelo híbrido ou de trabalho remoto. O retorno repentino ao presencial, sem aviso prévio, gerou desconforto e impactos negativos na qualidade de vida e na conciliação entre vida pessoal e profissional. Além disso, a falta de opções de trabalho flexível contrasta com as expectativas dos funcionários, que buscam autonomia na escolha do formato de trabalho. Essas questões evidenciam a importância de repensar e adaptar o modelo de trabalho da empresa para atender às necessidades e expectativas dos colaboradores.
+- **Modelo de Trabalho Rigorosamente Presencial:** Este é o tópico dominante e mais crítico. A forte insistência no modelo de trabalho 100% presencial é consistentemente citada como um ponto negativo, mesmo em áreas que se beneficiariam significativamente de flexibilidade (áreas técnicas, desenvolvimento de software). Há frustração com a revogação de políticas de trabalho remoto e a imposição do presencial, em alguns casos, com ameaça de demissão ("layoff forçado"). O tema é reiterado em quase todas as reclamações.
+- **Benefícios e Remuneração Positivos:** Embora o modelo de trabalho seja visto como limitante, os funcionários reconhecem e valorizam os benefícios oferecidos pela empresa, incluindo salário competitivo, vale alimentação/refeição, plano de saúde e PLR.  A estrutura salarial é vista como justa e condizente com o mercado.
+- **Ambiente de Trabalho e Cultura:** Há opiniões divergentes sobre o ambiente de trabalho. Embora alguns descrevam um ambiente positivo, com bons líderes e colegas, outros relatam um ambiente tóxico, demissões em massa e uma cultura "massante" e engessada.  A falta de progressão de carreira e a necessidade de "implorar por promoções" também contribuem para a insatisfação.
+- **Potencial de Desenvolvimento e Tecnologia:** A empresa é vista como inovadora, com projetos interessantes e uso de tecnologias de ponta, o que oferece oportunidades de desenvolvimento profissional. No entanto, a inflexibilidade do modelo de trabalho limita a capacidade dos funcionários de aproveitar essas oportunidades.
+- **Estrutura e Processos em Desenvolvimento:** Reconhece-se que a empresa está em crescimento e ainda precisa estruturar alguns processos.  Isso, combinado com a cultura de "banco" (tradicional), contribui para a sensação de rigidez e falta de agilidade.
+
+
+
+Espero que esta análise detalhada seja útil. Se precisar de mais alguma coisa, me diga!
